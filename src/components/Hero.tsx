@@ -22,23 +22,41 @@ const Hero: React.FC<HeroProps> = ({ className, scrollToSection }) => {
     const image = imageRef.current;
     const icons = iconsRef.current;
     
-    if (title) title.classList.add('animate-fade-in');
-    
-    // Staggered animations
+    // Add a small delay before starting animations
     setTimeout(() => {
-      if (subtitle) subtitle.classList.add('animate-fade-in');
+      if (title) {
+        title.style.opacity = '1';
+        title.style.transform = 'translateY(0)';
+      }
+    }, 100);
+    
+    // Staggered animations with improved timing
+    setTimeout(() => {
+      if (subtitle) {
+        subtitle.style.opacity = '1';
+        subtitle.style.transform = 'translateY(0)';
+      }
     }, 300);
     
     setTimeout(() => {
-      if (icons) icons.classList.add('animate-fade-in');
+      if (icons) {
+        icons.style.opacity = '1';
+        icons.style.transform = 'translateY(0)';
+      }
     }, 500);
     
     setTimeout(() => {
-      if (button) button.classList.add('animate-fade-in');
+      if (button) {
+        button.style.opacity = '1';
+        button.style.transform = 'translateY(0)';
+      }
     }, 700);
     
     setTimeout(() => {
-      if (image) image.classList.add('animate-fade-in');
+      if (image) {
+        image.style.opacity = '1';
+        image.style.transform = 'translateY(0)';
+      }
     }, 900);
   }, []);
 
@@ -50,7 +68,7 @@ const Hero: React.FC<HeroProps> = ({ className, scrollToSection }) => {
       <div className="flex-1 max-w-xl">
         <h1 
           ref={titleRef}
-          className="opacity-0 text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight"
+          className="opacity-0 transform translate-y-4 transition-all duration-500 ease-out text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight"
         >
           <span className="text-fairfi-black">Fair</span>
           <span className="text-fairfi-orange">Fi</span>
@@ -59,14 +77,14 @@ const Hero: React.FC<HeroProps> = ({ className, scrollToSection }) => {
         
         <p 
           ref={subtitleRef}
-          className="opacity-0 text-lg md:text-xl mb-8 text-gray-700 leading-relaxed"
+          className="opacity-0 transform translate-y-4 transition-all duration-500 ease-out text-lg md:text-xl mb-8 text-gray-700 leading-relaxed"
         >
           FairFi is dedicated to eliminating poverty and inequality through innovative programs, connecting resources with opportunities, and creating sustainable economic growth for all communities.
         </p>
         
         <div 
           ref={iconsRef} 
-          className="opacity-0 flex gap-6 mb-8"
+          className="opacity-0 transform translate-y-4 transition-all duration-500 ease-out flex gap-6 mb-8"
         >
           <div className="flex items-center gap-2">
             <div className="p-2 rounded-full bg-fairfi-orange/20">
@@ -93,7 +111,7 @@ const Hero: React.FC<HeroProps> = ({ className, scrollToSection }) => {
         <button
           ref={buttonRef}
           onClick={scrollToSection}
-          className="opacity-0 group flex items-center gap-2 bg-fairfi-orange text-white px-8 py-4 rounded-full font-medium shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px]"
+          className="opacity-0 transform translate-y-4 transition-all duration-500 ease-out group flex items-center gap-2 bg-fairfi-orange text-white px-8 py-4 rounded-full font-medium shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px]"
         >
           Explore Our Programs
           <ArrowDown className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-1" />
@@ -102,7 +120,7 @@ const Hero: React.FC<HeroProps> = ({ className, scrollToSection }) => {
       
       <div 
         ref={imageRef}
-        className="opacity-0 flex-1 mt-12 md:mt-0 max-w-md lg:max-w-xl"
+        className="opacity-0 transform translate-y-4 transition-all duration-500 ease-out flex-1 mt-12 md:mt-0 max-w-md lg:max-w-xl"
       >
         <div className="relative w-full aspect-square md:aspect-[4/3]">
           <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-xl shadow-fairfi-orange/10">
