@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { cn } from "@/lib/utils";
 import { ArrowDown, Heart, ShieldCheck, Users } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 interface HeroProps {
   className?: string;
@@ -70,8 +71,8 @@ const Hero: React.FC<HeroProps> = ({ className, scrollToSection }) => {
           ref={titleRef}
           className="opacity-0 transform translate-y-4 transition-all duration-500 ease-out text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight"
         >
-          <span className="text-fairfi-black">Fair</span>
-          <span className="text-fairfi-orange">Fi</span>
+          <span className="text-fairfi-black">Vikas</span>
+          <span className="text-fairfi-orange">Yatra</span>
           <span className="block text-fairfi-black mt-2">Bridging Gaps, Building Futures</span>
         </h1>
         
@@ -79,7 +80,7 @@ const Hero: React.FC<HeroProps> = ({ className, scrollToSection }) => {
           ref={subtitleRef}
           className="opacity-0 transform translate-y-4 transition-all duration-500 ease-out text-lg md:text-xl mb-8 text-gray-700 leading-relaxed"
         >
-          FairFi is dedicated to eliminating poverty and inequality through innovative programs, connecting resources with opportunities, and creating sustainable economic growth for all communities.
+          VikasYatra is dedicated to eliminating poverty and inequality through innovative programs, connecting resources with opportunities, and creating sustainable economic growth for all communities.
         </p>
         
         <div 
@@ -113,7 +114,7 @@ const Hero: React.FC<HeroProps> = ({ className, scrollToSection }) => {
           onClick={scrollToSection}
           className="opacity-0 transform translate-y-4 transition-all duration-500 ease-out group flex items-center gap-2 bg-fairfi-orange text-white px-8 py-4 rounded-full font-medium shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px]"
         >
-          Explore Our Programs
+          Learn More
           <ArrowDown className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-1" />
         </button>
       </div>
@@ -125,29 +126,11 @@ const Hero: React.FC<HeroProps> = ({ className, scrollToSection }) => {
         <div className="relative w-full aspect-square md:aspect-[4/3]">
           <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-xl shadow-fairfi-orange/10">
             <img 
-              src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&q=80" 
-              alt="People working together" 
+              src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80" 
+              alt="People working together for community development" 
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-fairfi-orange/30 to-transparent mix-blend-overlay"></div>
-          </div>
-          
-          <div className="absolute bottom-4 right-4 bg-white p-4 rounded-xl shadow-lg max-w-[80%]">
-            <div className="text-sm font-medium text-fairfi-black">Our Impact</div>
-            <div className="flex items-center gap-4 mt-2">
-              <div>
-                <div className="text-xl font-bold text-fairfi-orange">25K+</div>
-                <div className="text-xs text-gray-500">People Helped</div>
-              </div>
-              <div>
-                <div className="text-xl font-bold text-fairfi-orange">100+</div>
-                <div className="text-xs text-gray-500">Communities</div>
-              </div>
-              <div>
-                <div className="text-xl font-bold text-fairfi-orange">15+</div>
-                <div className="text-xs text-gray-500">Countries</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
