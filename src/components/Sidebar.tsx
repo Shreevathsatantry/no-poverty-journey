@@ -46,8 +46,8 @@ const Sidebar: React.FC<SidebarProps> = ({ className }) => {
               "text-2xl font-bold text-fairfi-black transition-opacity duration-300",
               isOpen ? "opacity-100" : "opacity-0"
             )}>
-              <span className="text-fairfi-black">Fair</span>
-              <span className="text-fairfi-orange">Fi</span>
+              <span className="text-fairfi-black">Vikas</span>
+              <span className="text-fairfi-orange">Yatra</span>
             </h2>
             <p className={cn(
               "text-sm text-gray-500 mt-1 transition-opacity duration-300",
@@ -113,3 +113,4 @@ const Sidebar: React.FC<SidebarProps> = ({ className }) => {
 };
 
 export default Sidebar;
+

@@ -3,7 +3,6 @@ import React, { useRef } from 'react';
 import Layout from '@/components/Layout';
 import Hero from '@/components/Hero';
 import Cards from '@/components/Cards';
-import { Upload } from 'lucide-react';
 
 const Index = () => {
   const programsRef = useRef<HTMLDivElement>(null);
@@ -24,8 +23,8 @@ const Index = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <h3 className="text-2xl font-bold mb-6">
-              <span className="text-white">Fair</span>
-              <span className="text-fairfi-orange">Fi</span>
+              <span className="text-white">Vikas</span>
+              <span className="text-fairfi-orange">Yatra</span>
             </h3>
             <p className="text-gray-400">
               Creating economic equality and opportunities for all.
@@ -61,7 +60,7 @@ const Index = () => {
         </div>
         
         <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500">
-          <p>© {new Date().getFullYear()} FairFi. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} VikasYatra. All rights reserved.</p>
         </div>
       </footer>
     </Layout>
