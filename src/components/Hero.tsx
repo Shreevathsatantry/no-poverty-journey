@@ -125,7 +125,7 @@ const Hero: React.FC<HeroProps> = ({ className, scrollToSection }) => {
         <div className="relative w-full aspect-square md:aspect-[4/3]">
           <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-xl shadow-fairfi-orange/10">
             <img 
-              src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80" 
+              src="public/image.jpeg" 
               alt="Community development through technology and education" 
               className="w-full h-full object-cover"
             />
