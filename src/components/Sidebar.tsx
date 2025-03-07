@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
-import { ChevronLeft, ChevronRight, Home, Info, Phone, Users, Award } from "lucide-react";
+import { ChevronLeft, ChevronRight, Home, Info, Phone, Users, Award, Heart } from "lucide-react";
 
 interface SidebarProps {
   className?: string;
@@ -26,8 +26,9 @@ const Sidebar: React.FC<SidebarProps> = ({ className }) => {
   const menuItems = [
     { icon: Home, label: 'Home', href: '#' },
     { icon: Info, label: 'About Us', href: '#' },
-    { icon: Users, label: 'Our Programs', href: '#' },
+    { icon: Users, label: 'Our Programs', href: '#programs' },
     { icon: Award, label: 'Impact', href: '#' },
+    { icon: Heart, label: 'Donate', href: '#' },
     { icon: Phone, label: 'Contact', href: '#' },
   ];
 
@@ -40,7 +41,7 @@ const Sidebar: React.FC<SidebarProps> = ({ className }) => {
         )}
       >
         <div className="h-full overflow-hidden">
-          <div className="p-6">
+          <div className="p-6 border-b border-fairfi-orange/10">
             <h2 className={cn(
               "text-2xl font-bold text-fairfi-black transition-opacity duration-300",
               isOpen ? "opacity-100" : "opacity-0"
@@ -48,6 +49,12 @@ const Sidebar: React.FC<SidebarProps> = ({ className }) => {
               <span className="text-fairfi-black">Fair</span>
               <span className="text-fairfi-orange">Fi</span>
             </h2>
+            <p className={cn(
+              "text-sm text-gray-500 mt-1 transition-opacity duration-300",
+              isOpen ? "opacity-100" : "opacity-0"
+            )}>
+              Bridging Gaps, Building Futures
+            </p>
           </div>
           
           <nav className="mt-8">
@@ -72,6 +79,18 @@ const Sidebar: React.FC<SidebarProps> = ({ className }) => {
               ))}
             </ul>
           </nav>
+          
+          <div className={cn(
+            "absolute bottom-8 left-0 right-0 px-6 transition-opacity duration-300",
+            isOpen ? "opacity-100" : "opacity-0"
+          )}>
+            <div className="bg-fairfi-orange/10 p-4 rounded-xl">
+              <p className="text-sm font-medium text-fairfi-black mb-2">Ready to make an impact?</p>
+              <button className="w-full bg-fairfi-orange text-white py-2 rounded-lg font-medium hover:bg-fairfi-orange/90 transition-colors">
+                Get Involved
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 

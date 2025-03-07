@@ -45,7 +45,7 @@ const Card: React.FC<CardProps> = ({ title, description, icon: Icon, delay }) =>
   return (
     <div
       ref={cardRef}
-      className="opacity-0 bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px] group"
+      className="opacity-0 bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px] group border-b-4 border-fairfi-orange/80"
     >
       <div className="flex flex-col h-full">
         <div className="mb-4 p-3 bg-fairfi-orange/10 rounded-xl w-fit">
@@ -104,7 +104,10 @@ const Cards: React.FC<CardsProps> = ({ className, id }) => {
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Programs</h2>
+          <div className="inline-block bg-fairfi-orange/10 px-4 py-2 rounded-full mb-4">
+            <span className="text-fairfi-orange font-semibold">Our Focus Areas</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Programs that Create Impact</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Explore our initiatives designed to create equal opportunities and reduce economic inequality across different sectors.
           </p>
@@ -124,8 +127,8 @@ const Cards: React.FC<CardsProps> = ({ className, id }) => {
       </div>
       
       {/* Background shapes */}
-      <div className="absolute top-20 left-10 w-64 h-64 bg-fairfi-orange/5 rounded-full filter blur-3xl"></div>
-      <div className="absolute bottom-20 right-10 w-80 h-80 bg-fairfi-orange/10 rounded-full filter blur-3xl"></div>
+      <div className="absolute top-20 left-10 w-64 h-64 bg-fairfi-orange/10 rounded-full filter blur-3xl"></div>
+      <div className="absolute bottom-20 right-10 w-80 h-80 bg-fairfi-orange/15 rounded-full filter blur-3xl"></div>
     </section>
   );
 };
